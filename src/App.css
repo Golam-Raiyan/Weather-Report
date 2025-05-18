@@ -1,0 +1,125 @@
+/* styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  color: #0077b6; /* title color */
+  -webkit-text-stroke: 1px white; /* outline */
+  text-shadow: 1px white; /* for some browsers */
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease-in-out;
+  text-align: center;
+}
+
+/* input and button */
+input {
+  padding: 12px;
+  margin-top: 10px;
+  width: 90%;
+  max-width: 300px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #0077b6;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005f8a;
+}
+
+/* result box */
+.weather-box {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  width: 90%;
+  max-width: 400px;
+  color: inherit;
+}
+.weather-box h2 {
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-weight: 700;
+}
+
+/* Error text */
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* gradient backgrounds */
+.app.clear {
+  background: linear-gradient(to bottom right, #56ccf2, #2f80ed);
+  color: #fff;
+}
+
+.app.clouds {
+  background: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
+  color: #fff;
+}
+
+.app.rain {
+  background: linear-gradient(to bottom right, #373B44, #4286f4);
+  color: #fff;
+}
+
+.app.snow {
+  background: linear-gradient(to bottom right, #e6dada, #274046);
+  color: #000;
+}
+
+.app.haze,
+.app.mist,
+.app.fog {
+  background: linear-gradient(to bottom right, #3e5151, #decba4);
+  color: #fff;
+}
+
+/* Mobile tweaks */
+@media (max-width: 500px) {
+  .weather-box {
+    padding: 15px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+}
